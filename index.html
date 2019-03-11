@@ -31,13 +31,15 @@
   width: 15em;
   height: 5em;
 }
-
-span {/*各テキストにanimationを設定*/
-  color: transparent;/*テキストを透明にしてtext-shadowだけ表示する*/
+  </style>
+<style>
+/* copied from https://codepen.io/onge/pen/KwdZpE */
+span {
+  color: transparent;
   animation: blur 10s ease-out infinite;
 }
  
-span:nth-child(1) {/*一文字ずつ遅延させる*/
+span:nth-child(1) {
   animation-delay: 0.1s;
 }
 span:nth-child(2) {
@@ -59,7 +61,7 @@ span:nth-child(7) {
   animation-delay: 0.7s;
 }
  
-@keyframes blur {/*opacityとtext-shadow+animationでフェードインを表現する*/
+@keyframes blur {
   0%    {text-shadow:  0 0 100px #fff; opacity:0;}
   5%    {text-shadow:  0 0 90px #fff;}
   15%    {opacity: 1;}
